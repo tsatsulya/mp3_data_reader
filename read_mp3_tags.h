@@ -2,23 +2,24 @@
 
 #include <iostream>
 #include <vector>
+#include <map>
+struct mp3_info {
+    std::string title = "unknown title";
+    std::string artist = "unknown artist";
+    std::string album = "unknown album";
+    std::string comment = "empty comment";
+    std::string date = "00_00_00";
+    std::string year = "0000";
+    std::string genre = "unknown genre";
+};
 
-typedef struct {
-	std::string title;
-	std::string artist;
-	std::string album;
-	std::string year;
-	std::string comment;
-	std::string genre;
-	std::string album_artist;
+//title: TIT2 TIT3
+//album: TALB
+//composer: TCOM
+//genre: TCON
+//date: tyer tdat
+//artist: tpe1
+//album_artist: tpe2
 
-} mp3_tags;
-
-std::vector<std::string> get_tags(std::string text_with_garbage);
-bool check_symbol(char i);
-
-bool check_mp3_format(FILE *mp3_file);
-int get_file_size(FILE *mp3_file);
-
-std::string simple_bites_reader(FILE *mp3_file, int num_of_bytes, int readloc = SEEK_CUR-1);
-void read_tags(FILE *mp3_file, mp3_tags *tags);
+mp3_info read_mp3_info(const char *file_name);
+void print_mp3_info(mp3_info& info);

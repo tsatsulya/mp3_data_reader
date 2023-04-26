@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/varvara/projects/mp3_data_reader/build",
+  "command": "/usr/bin/clang++ -g -o CMakeFiles/reader.dir/main.cpp.o -c /home/varvara/projects/mp3_data_reader/main.cpp",
+  "file": "/home/varvara/projects/mp3_data_reader/main.cpp"
+},
+{
+  "directory": "/home/varvara/projects/mp3_data_reader/build",
+  "command": "/usr/bin/clang++ -g -o CMakeFiles/reader.dir/read_mp3_tags.cpp.o -c /home/varvara/projects/mp3_data_reader/read_mp3_tags.cpp",
+  "file": "/home/varvara/projects/mp3_data_reader/read_mp3_tags.cpp"
+}
+]
